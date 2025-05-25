@@ -58,7 +58,7 @@ const About: React.FC<AboutProps> = ({ darkMode }) => {
               />
               
               <img
-                src="/SaiGanesh.jpg"
+                src="./SaiGanesh.jpg"
                 alt="Gujja Sai Ganesh"
                 className="w-full h-full object-cover relative z-10 mix-blend-overlay"
               />
@@ -118,7 +118,7 @@ const About: React.FC<AboutProps> = ({ darkMode }) => {
 
             <motion.div variants={itemVariants} className="mt-8">
               <a
-                href="/SaiGanesh_Resume.pdf"
+                href="./SaiGanesh_Resume.pdf"
                 download="SaiGanesh_Resume.pdf"
                 className={`inline-flex items-center px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                   darkMode 

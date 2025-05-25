@@ -80,34 +80,34 @@ const Skills: React.FC<SkillsProps> = ({ darkMode }) => {
   };
 
   const programmingSkills = [
-    { name: 'Python', icon: '/skills/python.svg' },
-    { name: 'Java', icon: '/skills/Java.svg' },
-    { name: 'C', icon: '/skills/c.svg' },
+    { name: 'Python', icon: './skills/python.svg' },
+    { name: 'Java', icon: './skills/Java.svg' },
+    { name: 'C', icon: './skills/c.svg' },
   ];
 
   const webTechSkills = [
-    { name: 'HTML5', icon: '/skills/HTML5.svg' },
-    { name: 'CSS3', icon: '/skills/CSS3.svg' },
+    { name: 'HTML5', icon: './skills/HTML5.svg' },
+    { name: 'CSS3', icon: './skills/CSS3.svg' },
   ];
 
   const databaseSkills = [
-    { name: 'MySQL', icon: '/skills/mysql.svg' },
+    { name: 'MySQL', icon: './skills/mysql.svg' },
   ];
 
   const mlSkills = [
-    { name: 'Pandas', icon: '/skills/pandas.svg' },
-    { name: 'NumPy', icon: '/skills/numpy.svg' },
-    { name: 'OpenCV', icon: '/skills/opencv.svg' },
+    { name: 'Pandas', icon: './skills/pandas.svg' },
+    { name: 'NumPy', icon: './skills/numpy.svg' },
+    { name: 'OpenCV', icon: './skills/opencv.svg' },
   ];
 
   const currentlyLearningSkills = [
     { 
       name: 'Canva', 
-      icon: '/skills/canva-icon.svg'
+      icon: './skills/canva-icon.svg'
     },
     { 
       name: 'Adobe Photoshop', 
-      icon: '/skills/adobe-photoshop-icon.svg'
+      icon: './skills/adobe-photoshop-icon.svg'
     },
   ];
 
