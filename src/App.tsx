@@ -9,15 +9,13 @@ import Footer from './components/Footer';
 import Cursor from './components/Cursor';
 
 function App() {
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add('dark');
-      document.body.style.backgroundColor = '#111827'; // gray-900
     } else {
       document.documentElement.classList.remove('dark');
-      document.body.style.backgroundColor = '#f9fafb'; // gray-50
     }
   }, [darkMode]);
 
@@ -26,17 +24,19 @@ function App() {
   };
 
   return (
-    <div className={darkMode ? 'dark' : ''}>
-      <Cursor />
-      <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-      <main>
-        <Hero darkMode={darkMode} />
-        <About darkMode={darkMode} />
-        <Skills darkMode={darkMode} />
-        <Projects darkMode={darkMode} />
-        <Contact darkMode={darkMode} />
-      </main>
-      <Footer darkMode={darkMode} />
+    <div className={`${darkMode ? 'dark' : ''} min-h-screen`}>
+      <div className={`min-h-screen ${darkMode ? 'bg-dark-300' : 'bg-light-200'} transition-colors duration-300`}>
+        <Cursor />
+        <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+        <main className={`${darkMode ? 'text-light-100' : 'text-dark-100'}`}>
+          <Hero darkMode={darkMode} />
+          <About darkMode={darkMode} />
+          <Skills darkMode={darkMode} />
+          <Projects darkMode={darkMode} />
+          <Contact darkMode={darkMode} />
+        </main>
+        <Footer darkMode={darkMode} />
+      </div>
     </div>
   );
 }
