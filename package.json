@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://gujjasaiganesh.github.io/Portfolio-main",
+  "homepage": "https://gujjasaiganesh.github.io/Portfolio-main/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
