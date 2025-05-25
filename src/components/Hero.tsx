@@ -21,8 +21,8 @@ const Hero: React.FC<HeroProps> = ({ darkMode }) => {
     <section
       id="home"
       className={`relative h-screen w-full flex flex-col justify-center items-center px-8 ${
-        darkMode ? 'bg-dark-300 text-light-100' : 'bg-light-200 text-dark-100'
-      }`}
+        darkMode ? 'bg-dark-300' : 'bg-light-200'
+      } text-dark-100`}
     >
       <ParticleBackground />
 
@@ -72,9 +72,9 @@ const Hero: React.FC<HeroProps> = ({ darkMode }) => {
             href="#contact"
             className={`px-8 py-3 rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300 font-inter ${
               darkMode 
-                ? 'bg-dark-200/80 backdrop-blur-sm text-light-100 hover:bg-dark-100/90' 
-                : 'bg-light-300/80 backdrop-blur-sm text-dark-100 hover:bg-light-400/90'
-            }`}
+                ? 'bg-dark-200/80 backdrop-blur-sm hover:bg-dark-100/90' 
+                : 'bg-light-300/80 backdrop-blur-sm hover:bg-light-400/90'
+            } text-dark-100`}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -94,7 +94,7 @@ const Hero: React.FC<HeroProps> = ({ darkMode }) => {
           animate={{ y: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 1.5 }}
         >
-          <ChevronDown className={`w-8 h-8 ${darkMode ? 'text-light-100' : 'text-dark-100'}`} />
+          <ChevronDown className={`w-8 h-8 text-dark-100`} />
         </motion.div>
       </motion.div>
     </section>

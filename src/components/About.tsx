@@ -32,8 +32,8 @@ const About: React.FC<AboutProps> = ({ darkMode }) => {
       id="about"
       ref={ref}
       className={`min-h-screen w-full flex items-center px-8 py-20 ${
-        darkMode ? 'bg-dark-300 text-light-100' : 'bg-light-200 text-dark-100'
-      }`}
+        darkMode ? 'bg-dark-300' : 'bg-light-200'
+      } text-dark-100`}
     >
       <div className="max-w-7xl mx-auto">
         <motion.div

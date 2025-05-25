@@ -10,8 +10,8 @@ const Footer: React.FC<FooterProps> = ({ darkMode }) => {
 
   return (
     <footer className={`w-full py-12 px-8 ${
-      darkMode ? 'bg-gray-900 text-white' : 'bg-gray-100 text-gray-900'
-    }`}>
+      darkMode ? 'bg-dark-300' : 'bg-light-200'
+    } text-dark-100`}>
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <motion.div 
@@ -23,7 +23,7 @@ const Footer: React.FC<FooterProps> = ({ darkMode }) => {
             <a href="#home" className="text-2xl font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
               Gujja Sai Ganesh
             </a>
-            <p className={`mt-2 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+            <p className="text-dark-100 mt-2">
               AI/ML Student & Developer
             </p>
           </motion.div>
@@ -39,7 +39,7 @@ const Footer: React.FC<FooterProps> = ({ darkMode }) => {
               <Heart className="w-4 h-4 mx-1 text-red-500 animate-pulse" />
               <p>and React</p>
             </div>
-            <p className={`mt-2 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+            <p className="text-dark-100 mt-2">
               &copy; {year} Gujja Sai Ganesh. All rights reserved.
             </p>
           </motion.div>

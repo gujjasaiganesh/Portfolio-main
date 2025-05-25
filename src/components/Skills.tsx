@@ -116,8 +116,8 @@ const Skills: React.FC<SkillsProps> = ({ darkMode }) => {
       id="skills"
       ref={ref}
       className={`min-h-screen w-full flex flex-col justify-center px-8 py-20 ${
-        darkMode ? 'bg-gray-800 text-white' : 'bg-white text-gray-900'
-      }`}
+        darkMode ? 'bg-dark-300' : 'bg-light-200'
+      } text-dark-100`}
     >
       <div className="max-w-7xl mx-auto w-full">
         <motion.div
