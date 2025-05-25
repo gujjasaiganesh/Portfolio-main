@@ -73,7 +73,7 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
             ? 'bg-dark-300/90 backdrop-blur-md shadow-lg'
             : 'bg-light-200/90 backdrop-blur-md shadow-lg'
           : 'bg-transparent'
-      } text-dark-100`}
+      } ${darkMode ? 'text-white' : 'text-dark-100'}`}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <motion.a
@@ -104,7 +104,9 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
             <motion.li key={item.name} variants={navItemVariants}>
               <a
                 href={item.href}
-                className={`text-sm font-medium transition-colors duration-300 relative group text-dark-100`}
+                className={`text-sm font-medium transition-colors duration-300 relative group ${
+                  darkMode ? 'text-white hover:text-white' : 'text-dark-100 hover:text-dark-300'
+                }`}
                 onClick={(e) => handleNavClick(e, item.href)}
               >
                 {item.name}
@@ -119,7 +121,7 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
               aria-label="Toggle dark mode"
             >
               {darkMode ? (
-                <Sun className="w-5 h-5 text-primary-300" />
+                <Sun className={`w-5 h-5 ${darkMode ? 'text-white' : 'text-primary-300'}`} />
               ) : (
                 <Moon className="w-5 h-5 text-dark-100" />
               )}
@@ -135,7 +137,7 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
             aria-label="Toggle dark mode"
           >
             {darkMode ? (
-              <Sun className="w-5 h-5 text-primary-300" />
+              <Sun className={`w-5 h-5 ${darkMode ? 'text-white' : 'text-primary-300'}`} />
             ) : (
               <Moon className="w-5 h-5 text-dark-100" />
             )}
@@ -146,9 +148,9 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
             aria-label="Open mobile menu"
           >
             {isMobileMenuOpen ? (
-              <X className={`w-6 h-6 ${darkMode ? 'text-light-100' : 'text-dark-100'}`} />
+              <X className={`w-6 h-6 ${darkMode ? 'text-white' : 'text-dark-100'}`} />
             ) : (
-              <Menu className={`w-6 h-6 ${darkMode ? 'text-light-100' : 'text-dark-100'}`} />
+              <Menu className={`w-6 h-6 ${darkMode ? 'text-white' : 'text-dark-100'}`} />
             )}
           </button>
         </div>
@@ -158,7 +160,7 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
       <motion.div
         className={`md:hidden absolute top-full left-0 w-full ${
           darkMode ? 'bg-dark-300/95' : 'bg-light-200/95'
-        } backdrop-blur-md shadow-lg p-4 text-dark-100`}
+        } backdrop-blur-md shadow-lg p-4`}
         initial={{ height: 0, opacity: 0 }}
         animate={{
           height: isMobileMenuOpen ? 'auto' : 0,
@@ -172,7 +174,9 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
             <li key={item.name}>
               <a
                 href={item.href}
-                className={`block py-2 text-center text-lg font-medium text-dark-100`}
+                className={`block py-2 text-center text-lg font-medium ${
+                  darkMode ? 'text-white hover:text-white' : 'text-dark-100 hover:text-dark-300'
+                }`}
                 onClick={(e) => handleNavClick(e, item.href)}
               >
                 {item.name}
