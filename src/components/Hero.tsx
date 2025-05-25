@@ -21,7 +21,7 @@ const Hero: React.FC<HeroProps> = ({ darkMode }) => {
     <section
       id="home"
       className={`relative h-screen w-full flex flex-col justify-center items-center px-8 ${
-        darkMode ? 'text-white' : 'text-gray-900'
+        darkMode ? 'bg-dark-300 text-light-100' : 'bg-light-200 text-dark-100'
       }`}
     >
       <ParticleBackground />
@@ -33,10 +33,10 @@ const Hero: React.FC<HeroProps> = ({ darkMode }) => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-5xl md:text-7xl font-bold leading-tight mb-6"
+          className="font-poppins text-5xl md:text-7xl font-bold leading-tight mb-6"
         >
           <span className="inline-block">Hello, I'm </span>
-          <span className="inline-block bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+          <span className="inline-block bg-gradient-to-r from-primary-400 via-secondary-400 to-primary-500 bg-clip-text text-transparent">
             Gujja Sai Ganesh
           </span>
         </motion.h1>
@@ -46,7 +46,7 @@ const Hero: React.FC<HeroProps> = ({ darkMode }) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
         >
-          <h2 className="text-xl md:text-3xl font-light mb-8">
+          <h2 className="font-inter text-xl md:text-3xl font-light mb-8">
             <span className="inline-block">Aspiring</span>{" "}
             <span className="inline-block font-medium">AI/ML Engineer</span>{" "}
             <span className="inline-block">with a passion for innovation</span>
@@ -61,7 +61,7 @@ const Hero: React.FC<HeroProps> = ({ darkMode }) => {
         >
           <motion.a
             href="#projects"
-            className="px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full text-white font-medium shadow-lg hover:shadow-xl transition-all duration-300"
+            className="px-8 py-3 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full text-white font-medium shadow-lg hover:shadow-xl transition-all duration-300 font-inter"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -70,10 +70,10 @@ const Hero: React.FC<HeroProps> = ({ darkMode }) => {
           
           <motion.a
             href="#contact"
-            className={`px-8 py-3 rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300 ${
+            className={`px-8 py-3 rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300 font-inter ${
               darkMode 
-                ? 'bg-white/10 backdrop-blur-sm text-white hover:bg-white/20' 
-                : 'bg-gray-900/10 backdrop-blur-sm text-gray-900 hover:bg-gray-900/20'
+                ? 'bg-dark-200/80 backdrop-blur-sm text-light-100 hover:bg-dark-100/90' 
+                : 'bg-light-300/80 backdrop-blur-sm text-dark-100 hover:bg-light-400/90'
             }`}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -94,7 +94,7 @@ const Hero: React.FC<HeroProps> = ({ darkMode }) => {
           animate={{ y: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 1.5 }}
         >
-          <ChevronDown className={`w-8 h-8 ${darkMode ? 'text-white' : 'text-gray-800'}`} />
+          <ChevronDown className={`w-8 h-8 ${darkMode ? 'text-light-100' : 'text-dark-100'}`} />
         </motion.div>
       </motion.div>
     </section>
