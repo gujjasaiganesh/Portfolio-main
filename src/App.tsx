@@ -28,7 +28,7 @@ function App() {
       <div className={`min-h-screen ${darkMode ? 'bg-dark-300' : 'bg-light-200'} transition-colors duration-300`}>
         <Cursor />
         <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-        <main className="text-dark-100">
+        <main className={`${darkMode ? 'text-white' : 'text-dark-100'}`}>
           <Hero darkMode={darkMode} />
           <About darkMode={darkMode} />
           <Skills darkMode={darkMode} />

@@ -107,8 +107,8 @@ const Contact: React.FC<ContactProps> = ({ darkMode }) => {
       id="contact"
       ref={ref}
       className={`min-h-screen w-full flex flex-col justify-center py-20 px-8 ${
-        darkMode ? 'bg-dark-300' : 'bg-light-200'
-      } text-dark-100`}
+        darkMode ? 'bg-dark-300 text-white' : 'bg-light-200 text-dark-100'
+      }`}
     >
       <div className="max-w-7xl mx-auto w-full">
         <motion.div
