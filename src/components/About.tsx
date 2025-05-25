@@ -116,8 +116,8 @@ const About: React.FC<AboutProps> = ({ darkMode }) => {
 
             <motion.div variants={itemVariants} className="mt-8">
               <a
-                href="./SaiGanesh_Resume.pdf"
-                download="SaiGanesh_Resume.pdf"
+                href="./gujjasaiganesh_resume.pdf"
+                download="gujjasaiganesh_resume.pdf"
                 className={`inline-flex items-center px-6 py-3 rounded-full font-medium transition-all duration-300 bg-gradient-to-r from-primary-500 to-secondary-500 text-white hover:shadow-lg hover:shadow-primary-500/20`}
               >
                 <Download className="w-5 h-5 mr-2" />
