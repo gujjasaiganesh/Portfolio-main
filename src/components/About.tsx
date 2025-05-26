@@ -109,7 +109,7 @@ const About: React.FC<AboutProps> = ({ darkMode }) => {
               <div className={`px-4 py-2 rounded-lg ${
                 darkMode ? 'bg-dark-200' : 'bg-light-300'
               } shadow-md`}>
-                <p className="text-xl font-bold text-secondary-400">3</p>
+                <p className="text-xl font-bold text-secondary-400">3+</p>
                 <p className="text-sm">Projects</p>
               </div>
             </motion.div>
