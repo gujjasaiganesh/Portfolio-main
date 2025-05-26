@@ -53,7 +53,7 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
       title: 'Portfolio Website',
       description: 'A clean and responsive portfolio website with an intuitive user interface. Built with modern web technologies for optimal performance and user experience.',
       image: './portfolio.jpg',
-      tags: ['HTML', 'CSS'],
+      tags: ['HTML', 'CSS', 'JavaScript'],
       githubUrl: 'https://github.com/gujjasaiganesh/growintern/tree/main/PORTFOLIO',
       liveUrl: '#',
       category: 'htmlcss',

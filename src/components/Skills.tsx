@@ -88,6 +88,7 @@ const Skills: React.FC<SkillsProps> = ({ darkMode }) => {
   const webTechSkills = [
     { name: 'HTML5', icon: './skills/HTML5.svg' },
     { name: 'CSS3', icon: './skills/CSS3.svg' },
+    { name: 'JavaScript', icon: './skills/javascript.svg' },
   ];
 
   const databaseSkills = [
@@ -108,6 +109,10 @@ const Skills: React.FC<SkillsProps> = ({ darkMode }) => {
     { 
       name: 'Adobe Photoshop', 
       icon: './skills/adobe-photoshop-icon.svg'
+    },
+    {
+      name: 'CapCut',
+      icon: './skills/capcut-icon.svg'
     },
   ];
 
