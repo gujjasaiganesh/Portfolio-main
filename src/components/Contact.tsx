@@ -87,7 +87,7 @@ const Contact: React.FC<ContactProps> = ({ darkMode }) => {
   const socialLinks = [
     {
       icon: <Linkedin className="w-6 h-6" />,
-      href: 'https://www.linkedin.com/in/gujja-sai-ganesh-816556365/',
+      href: 'https://www.linkedin.com/in/gujjasaiganesh/',
       label: 'LinkedIn',
     },
     {

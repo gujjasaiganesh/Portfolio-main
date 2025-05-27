@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { ExternalLink, Github } from 'lucide-react';
+import { Github } from 'lucide-react';
 
 interface Project {
   id: number;
@@ -10,7 +10,6 @@ interface Project {
   image: string;
   tags: string[];
   githubUrl: string;
-  liveUrl: string;
   category: string;
 }
 
@@ -35,7 +34,6 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
       image: './alzheimers-project.jpg',
       tags: ['Python', 'TensorFlow', 'OpenCV', 'CNN', 'EfficientNet-B3', 'Matplotlib'],
       githubUrl: 'https://github.com/gujjasaiganesh/Brain-Image-Analysis-For-Early-Detection-Of-Alzheimer-s',
-      liveUrl: '#',
       category: 'ml',
     },
     {
@@ -45,7 +43,6 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
       image: './carrer-path.jpg',
       tags: ['Python', 'Flask', 'OpenAI GPT-4', 'PyPDF2', 'HTML/CSS', 'Regular Expressions', 'Waitress WSGI'],
       githubUrl: 'https://github.com/gujjasaiganesh/Career-recommendation-Resume',
-      liveUrl: '#',
       category: 'ml',
     },
     {
@@ -55,7 +52,6 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
       image: './currency-converter.jpg',
       tags: ['Python', 'VSCode'],
       githubUrl: 'https://github.com/gujjasaiganesh/Currencyconverter',
-      liveUrl: '#',
       category: 'automation',
     },
     {
@@ -65,7 +61,6 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
       image: './portfolio.jpg',
       tags: ['HTML', 'CSS', 'JavaScript'],
       githubUrl: 'https://github.com/gujjasaiganesh/growintern/tree/main/PORTFOLIO',
-      liveUrl: '#',
       category: 'htmlcss',
     }
   ];
@@ -187,14 +182,6 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
                         className="p-2 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-colors duration-300"
                       >
                         <Github className="w-5 h-5 text-white" />
-                      </a>
-                      <a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-2 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-colors duration-300"
-                      >
-                        <ExternalLink className="w-5 h-5 text-white" />
                       </a>
                     </div>
                   </motion.div>

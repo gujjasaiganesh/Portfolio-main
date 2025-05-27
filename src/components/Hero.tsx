@@ -20,13 +20,31 @@ const Hero: React.FC<HeroProps> = ({ darkMode }) => {
   return (
     <section
       id="home"
-      className={`relative h-screen w-full flex flex-col justify-center items-center px-8 ${
-        darkMode ? 'bg-dark-300 text-white' : 'bg-light-200 text-dark-100'
+      className={`relative h-screen w-full flex flex-col justify-center items-center px-8 overflow-hidden ${
+        darkMode ? 'text-white' : 'text-dark-100'
       }`}
     >
+      {/* Video Background */}
+      <div className="absolute inset-0 -z-20">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover"
+          style={{ filter: darkMode ? 'brightness(0.4)' : 'brightness(0.8)' }}
+          onError={(e) => console.error('Video loading error:', e)}
+        >
+          <source src="./Motion.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      {/* Particle Overlay */}
       <ParticleBackground />
 
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20 dark:from-transparent dark:to-black/40" />
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/40 -z-10" />
       
       <div className="z-10 max-w-4xl mx-auto text-center">
         <motion.h1
@@ -61,7 +79,7 @@ const Hero: React.FC<HeroProps> = ({ darkMode }) => {
         >
           <motion.a
             href="#projects"
-            className="px-8 py-3 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full text-white font-medium shadow-lg hover:shadow-xl transition-all duration-300 font-inter"
+            className="px-8 py-3 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full text-white font-medium shadow-lg hover:shadow-xl transition-all duration-300 font-inter backdrop-blur-sm"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -70,10 +88,10 @@ const Hero: React.FC<HeroProps> = ({ darkMode }) => {
           
           <motion.a
             href="#contact"
-            className={`px-8 py-3 rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300 font-inter ${
+            className={`px-8 py-3 rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300 font-inter backdrop-blur-sm ${
               darkMode 
-                ? 'bg-dark-200/80 backdrop-blur-sm text-white hover:bg-dark-100/90' 
-                : 'bg-light-300/80 backdrop-blur-sm text-dark-100 hover:bg-light-400/90'
+                ? 'bg-white/10 text-white hover:bg-white/20' 
+                : 'bg-black/10 text-dark-100 hover:bg-black/20'
             }`}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -94,7 +112,7 @@ const Hero: React.FC<HeroProps> = ({ darkMode }) => {
           animate={{ y: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 1.5 }}
         >
-          <ChevronDown className={`w-8 h-8 ${darkMode ? 'text-white' : 'text-dark-100'}`} />
+          <ChevronDown className="w-8 h-8 text-white" />
         </motion.div>
       </motion.div>
     </section>

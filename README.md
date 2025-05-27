@@ -95,7 +95,7 @@ portfolio/
 ## 📱 Contact Information
 
 - Email: gujjasaiganesh@gmail.con
-- LinkedIn: [Gujja Sai Ganesh](https://www.linkedin.com/in/gujja-sai-ganesh-816556365/)
+- LinkedIn: [Gujja Sai Ganesh](https://www.linkedin.com/in/gujjasaiganesh/)
 - Instagram: [Gujja Sai Ganesh](https://www.instagram.com/sai_ganesh14?igsh=MWdlbjR5NzR4dXNmcw==)
 
 ## 📄 License
